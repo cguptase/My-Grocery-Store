@@ -39,4 +39,11 @@
     <string name="product_name">Product Name</string>
     <string name="ratingbar_image">Ratingbar Image</string>
     <string name="recommended_product_image">Recommended Product Image</string>
+    <string name="number">Phone Number</string>
+    <string name="address">Your Address</string>
+    <string name="update">Update</string>
+    <string name="discount">Discount: </string>
+    <string name="_20_off">20% OFF</string>
+    <string name="category_product_image">Category Product Image</string>
+    <string name="about_product">About Product</string>
 </resources>
