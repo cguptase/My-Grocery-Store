@@ -46,4 +46,24 @@
     <string name="_20_off">20% OFF</string>
     <string name="category_product_image">Category Product Image</string>
     <string name="about_product">About Product</string>
+    <string name="new_product_image">New Product Image</string>
+    <string name="sorry_there_is_no_new_products_yet">Sorry There is No New Products Yet</string>
+    <string name="your_cart_is_empty">Your Cart is Empty</string>
+    <string name="you_have_not_purchased_anything_yet">You Have Not Purchased Anything Yet</string>
+    <string name="price">Price $</string>
+    <string name="_30">30</string>
+    <string name="view_all_products">View All Products</string>
+    <string name="product_detail_image">Product Detail Image</string>
+    <string name="price_30_kg">Price: 30/kg</string>
+    <string name="add_item_image">Add Item Image</string>
+    <string name="_1">1</string>
+    <string name="remove_item_image">Remove Item Image</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="total_price_300">Total Price: $300</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="product_price">Product Price</string>
+    <string name="current_date">Current Date</string>
+    <string name="current_time">Current Time</string>
+    <string name="total_price">Total Price</string>
+    <string name="total_quantity">Total Quantity</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.project.mygrocerystore.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.project.mygrocerystore.activities.ViewAllActivity;
 import com.project.mygrocerystore.databinding.PopularItemBinding;
 import com.project.mygrocerystore.models.PopularModel;
 
@@ -38,6 +40,16 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         holder.binding.popRating.setText(popularModelList.get(position).getRating());
         holder.binding.popDes.setText(popularModelList.get(position).getDescription());
         holder.binding.popDiscount.setText(popularModelList.get(position).getDiscount());
+
+    holder.itemView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(context, ViewAllActivity.class);
+            intent.putExtra("type",popularModelList.get(position).getType());
+            context.startActivity(intent);
+        }
+    });
+
     }
 
     @Override
