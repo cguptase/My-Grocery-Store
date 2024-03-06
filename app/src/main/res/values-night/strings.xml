@@ -40,11 +40,13 @@
     <string name="_1">1</string>
     <string name="remove_item_image">Remove Item Image</string>
     <string name="add_to_cart">Add To Cart</string>
-    <string name="total_price_300">Total Price: $300</string>
+    <string name="total_price_0">Total Price: $0</string>
     <string name="buy_now">Buy Now</string>
     <string name="product_price">Product Price</string>
     <string name="current_date">Current Date</string>
     <string name="current_time">Current Time</string>
     <string name="total_price">Total Price</string>
     <string name="total_quantity">Total Quantity</string>
+    <string name="your_order_has_been_placed">Your Order Has Been Placed</string>
+    <string name="thank_you_for_purchasing_our_product_n_please_come_again">Thank You For Purchasing Our Product \n Please Come Again</string>
 </resources>

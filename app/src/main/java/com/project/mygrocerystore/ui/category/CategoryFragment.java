@@ -40,7 +40,8 @@ public class CategoryFragment extends Fragment {
         binding = FragmentCategoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         db = FirebaseFirestore.getInstance();
-
+        binding.progressbar.setVisibility(View.VISIBLE);
+        binding.catRec.setVisibility(View.GONE);
         binding.catRec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
         navCategoryModelList = new ArrayList<>();
         navCategoryAdapter = new NavCategoryAdapter(getActivity(), navCategoryModelList);
@@ -54,11 +55,13 @@ public class CategoryFragment extends Fragment {
                         NavCategoryModel navCategoryModel = document.toObject(NavCategoryModel.class);
                         navCategoryModelList.add(navCategoryModel);
                         navCategoryAdapter.notifyDataSetChanged();
-
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.catRec.setVisibility(View.VISIBLE);
                     }
                 } else {
                     Toast.makeText(getActivity(), "Error: " + task.getException(), Toast.LENGTH_SHORT).show();
-                }
+                    binding.progressbar.setVisibility(View.VISIBLE);
+                    binding.catRec.setVisibility(View.GONE);}
             }
         });
 

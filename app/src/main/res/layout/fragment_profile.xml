@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_img"
-        android:layout_width="match_parent"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/profile"

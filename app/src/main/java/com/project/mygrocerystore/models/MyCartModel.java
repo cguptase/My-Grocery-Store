@@ -1,18 +1,21 @@
 package com.project.mygrocerystore.models;
 
-public class MyCartModel {
-    String productName,productPrice,currentDate,currentTime,totalQuantity;
+import java.io.Serializable;
+
+public class MyCartModel implements Serializable {
+    String productName,productPrice,currentDate,currentTime,totalQuantity,documentId;
     int totalPrice;
 
     public MyCartModel() {
     }
 
-    public MyCartModel(String productName, String productPrice, String currentDate, String currentTime, String totalQuantity, int totalPrice) {
+    public MyCartModel(String productName, String productPrice, String currentDate, String currentTime, String totalQuantity, String documentId, int totalPrice) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.currentDate = currentDate;
         this.currentTime = currentTime;
         this.totalQuantity = totalQuantity;
+        this.documentId = documentId;
         this.totalPrice = totalPrice;
     }
 
@@ -54,6 +57,14 @@ public class MyCartModel {
 
     public void setTotalQuantity(String totalQuantity) {
         this.totalQuantity = totalQuantity;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
     }
 
     public int getTotalPrice() {

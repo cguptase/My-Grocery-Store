@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,9 +35,12 @@ public class ViewAllActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("View All Products");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        binding.progressbar.setVisibility(View.VISIBLE);
+
         firestore = FirebaseFirestore.getInstance();
 
         String type = getIntent().getStringExtra("type");
+        binding.viewAllRec.setVisibility(View.GONE);
         binding.viewAllRec.setLayoutManager(new LinearLayoutManager(this));
 
         viewAllModelList = new ArrayList<>();
@@ -52,6 +56,9 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.viewAllRec.setVisibility(View.VISIBLE);
+
                     }
                 }
             });
@@ -66,6 +73,9 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.viewAllRec.setVisibility(View.VISIBLE);
+
                     }
                 }
             });
@@ -80,6 +90,8 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.viewAllRec.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -94,6 +106,8 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.viewAllRec.setVisibility(View.VISIBLE);
                     }
                 }
             });
@@ -108,6 +122,8 @@ public class ViewAllActivity extends AppCompatActivity {
                         ViewAllModel viewAllModel = documentSnapshot.toObject(ViewAllModel.class);
                         viewAllModelList.add(viewAllModel);
                         viewAllAdapter.notifyDataSetChanged();
+                        binding.progressbar.setVisibility(View.GONE);
+                        binding.viewAllRec.setVisibility(View.VISIBLE);
                     }
                 }
             });

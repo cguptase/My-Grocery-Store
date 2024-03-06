@@ -108,11 +108,11 @@ public class DetailedActivity extends AppCompatActivity {
         cartMap.put("productName", viewAllModel.getName());
         cartMap.put("productPrice", binding.detailedPrice.getText().toString());
         cartMap.put("currentDate", saveCurrentDate);
-        cartMap.put("currentDate", saveCurrentTime);
-        cartMap.put("currentTime", binding.quantity.getText().toString());
+        cartMap.put("currentTime", saveCurrentTime);
+        cartMap.put("totalQuantity", binding.quantity.getText().toString());
         cartMap.put("totalPrice", totalPrice);
 
-        firestore.collection("AddToCart").document(auth.getCurrentUser().getUid()).collection("CurrentUser").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+        firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid()).collection("AddToCart").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
                 Toast.makeText(DetailedActivity.this, "Added To A Cart", Toast.LENGTH_SHORT).show();
